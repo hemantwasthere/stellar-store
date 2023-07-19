@@ -27,7 +27,7 @@ const CartPage = () => {
                 <div className="px-4 py-16 sm:px-6 lg:px-8">
                     <div className="lg:flex items-center justify-between lg:w-[60%]">
                         <h1 className="text-3xl font-bold text-black">Shopping Cart</h1>
-                        <Button onClick={onRemoveAll} className="mt-5 lg:mt-0 col-span-7 w-fit">Remove all items from cart</Button>
+                        {cart.items.length > 1 && <Button onClick={onRemoveAll} className="mt-5 lg:mt-0 bg-gray-300 text-black text-sm py-2 px-3">Remove all items</Button>}
                     </div>
                     <div className="mt-12 lg:grid lg:grid-cols-12 lg:items-start gap-x-12">
                         <div className="lg:col-span-7">
